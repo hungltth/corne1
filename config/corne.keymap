@@ -14,13 +14,29 @@
         compatible = "zmk,combos";
 
         sd {
-            bindings = <&kt LEFT_SHIFT>;
+            bindings = <&kp LEFT_SHIFT>;
             key-positions = <14 15>;
         };
 
         kl {
-            bindings = <&kt RSHFT>;
+            bindings = <&kp RSHFT>;
             key-positions = <20 21>;
+        };
+    };
+
+    macros {
+        m2: m2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S>;
+            label = "M2";
+        };
+
+        m3: m3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp G &kp I &kp T &kp SPACE &kp P &kp U &kp L &kp L &kp SPACE &kp O &kp R &kp I &kp G &kp I &kp N &kp SPACE &kp M &kp A &kp I &kp N>;
+            label = "M3";
         };
     };
 
